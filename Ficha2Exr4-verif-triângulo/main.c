@@ -18,28 +18,21 @@ int main() {
     if (abs(a - b) >= c || c >= a + b) {
         printf("Tens um triangulo do tipo:\n");
     } 
-    
-    else {
-        if (abs(a - b) < c && c < a + b) {
-            printf("Tens um triangulo do tipo:\n");
-        }
+    else if (abs(a - b) < c && c < a + b) {
+        printf("Tens um triangulo do tipo:\n");
     }
-
     if (a==b && b==c && c==a) {
         printf("\t[X] Equilatero.\n\t[ ] Isosceles\n\t[ ] Retangulo\n\t[ ] Escaleno\n");
-    } 
-    
-    else {
-        if (a==b || b==c || a ==c) {
-            printf("\t[ ] Equilatero.\n\t[X] Isosceles\n\t[ ] Retangulo\n\t[ ] Escaleno\n");            
+    }  
+    else if (a==b || b==c || a ==c) {
+        printf("\t[ ] Equilatero.\n\t[X] Isosceles\n\t[ ] Retangulo\n\t[ ] Escaleno\n");            
         } 
-        else {
-            if ((a*a)+(b*b)==c*c || (a*a)+(c*c)==b*b || (b*b)*(c*c)==a*a) {
+        else if ((a*a)+(b*b)==c*c || (a*a)+(c*c)==b*b || (b*b)*(c*c)==a*a) {
                 printf("\t[ ] Equilatero.\n\t[ ] Isosceles\n\t[X] Retangulo\n\t[ ] Escaleno\n");
-            } else {
+            } 
+            else {
                 printf("\t[ ] Equilatero.\n\t[ ] Isosceles\n\t[ ] Retangulo\n\t[X] Escaleno\n");
             }
-        }
-    }
+    
     return 0;
 }
