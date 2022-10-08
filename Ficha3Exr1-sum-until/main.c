@@ -19,6 +19,7 @@ int main()
     printf("Escolhe o método para calcular a soma de todos os algarismos ate o num. escolhido:\n\t\ta) WHILE\n\t\tb) DO-WHILE\n\t\tc) FOR\n\t\td) All at once\nR = ");
     scanf(" %c", &choice);
 
+    i = 1;
     while (i<=num)
     {
         ra+=i;
