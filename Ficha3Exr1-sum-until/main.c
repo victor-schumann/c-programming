@@ -3,7 +3,8 @@
 
 int main()
 {
-    int ra, rb, rc, i, j, k = 0;
+    int ra, rb, rc = 0;
+    int i, j, k = 1;
     int num;
     char choice;
 
@@ -15,25 +16,25 @@ int main()
         printf("Infelizmente nao posso utilizar este numero...\n");
     }
 
-    printf("Escolhe o método para calcular a soma de todos os algarismos ate o num. escolhido:\n\t\ta) WHILE\n\t\tb) DO-WHILE\n\t\tc) FOR\n\t\td) All at onceR = ");
+    printf("Escolhe o método para calcular a soma de todos os algarismos ate o num. escolhido:\n\t\ta) WHILE\n\t\tb) DO-WHILE\n\t\tc) FOR\n\t\td) All at once\nR = ");
     scanf(" %c", &choice);
 
     while (i<=num)
     {
         ra+=i;
-        i++;
+        ++i;
     }
 
     do
     {
         rb+=j;
-        j++;
+        ++j;
     }
     while (j<=num);
 
-    for (k = 1; k <= num; ++k)
+    for (k=1; k<=num; ++k)
     {
-        rc += k;
+        rc+=k;
     }
 
     switch (choice)
