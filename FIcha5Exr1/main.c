@@ -3,6 +3,7 @@
 
 int main()
 {
-    printf("Hello world!\n");
+    int vetorNotasFinais[25];
+    
     return 0;
 }
