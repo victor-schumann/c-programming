@@ -22,4 +22,6 @@ int main(void){
     printf("f() x = %d y = %d\n", x, y);
 }
 /* O resultado no monitor será o seguinte:
+opcao 1)    f() x = -2 y = 10
+            main: x = 1 y = 2
  */
