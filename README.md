@@ -15,5 +15,4 @@
 - [x] Fix string's extra spaces & '\0'/'\n' inconsistencies.
 - [x] Stop the user from having '0' as integer input;
 - [x] Stop user from having " " as string input;
-- [x] Stop user from having letter as integer inputs;
-- [ ] Build a data struture of a "student".
+- [x] Stop user from having letter as integer inputs.
