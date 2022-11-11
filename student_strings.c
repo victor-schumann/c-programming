@@ -28,7 +28,7 @@ int main() {
     showData(vectorFinalGrades, studentAmount);
     media = calcMedia(vectorFinalGrades, studentAmount);
     if (media > -1) {
-        printf("\nGRADE AVERAGE: %.2f\n\n", media);
+        printf("\nAVERAGE: %.2f\n\n", media);
     }
 
     return 0;
@@ -76,20 +76,20 @@ void changeGrade (int vectorFinalGrades[], int studentAmount) {
     if (studentAmount > 0) {
         nAluno = readInteger("\nIndique o nr. aluno ", 1, studentAmount);
 
-        vectorFinalGrades[nAluno-1] = readInteger("\nNova nota do aluno", 0, MAXGRADE);
+        vectorFinalGrades[nAluno-1] = readInteger("\nNew student grade: ", 0, MAXGRADE);
     }
 }
 
 float calcMedia(int vectorFinalGrades[], int studentAmount) {
-    int somaNotas=0, i;
+    int gradeSum=0, i;
     float media=-1;
 
     for (i=0; i < studentAmount; i++) {
-        somaNotas += vectorFinalGrades[i];
+        gradeSum += vectorFinalGrades[i];
     }
 
     if (studentAmount != 0) {
-        media = (float) somaNotas / studentAmount;
+        media = (float) gradeSum / studentAmount;
     }
 
     return media;
@@ -103,19 +103,19 @@ void showData (int vectorFinalGrades[], int studentAmount) {
         printf("\nATENCAO: nao existem alunos avaliados para apresentar\n");
     } else {
         for (i=0; i < studentAmount; i++) {
-            printf("\nNOTA(%d): %d", i+1, vectorFinalGrades[i]);
+            printf("\nGRADE(%d): %d", i+1, vectorFinalGrades[i]);
         }
     }
 }
 
 int readInteger (char msg[], int limMin, int limMax) {
-    int num;
+    int num, controlo;
 
     do {
         printf("%s", msg);
-        scanf("%d", &num);
+        controlo = scanf("%d", &num);
         cleanBuffer();
-        if (num < limMin || num > limMax) {
+        if (num < limMin || num > limMax || controlo == 0) {
             printf("\nERRO: o valor nao pertence ao intervalo [%d, %d]", limMin, limMax);
         }
     }
@@ -127,7 +127,7 @@ void readGrades(int vectorFinalGrades[], int studentAmount, char nameVector[][MA
     int i;
     char msg[MAXSTRING];
     for (i=0; i < studentAmount; i++) {
-        sprintf(msg, "\nNota (%d - %s): ", i+1, nameVector[i]);
+        sprintf(msg, "\nGrade (%d - %s): ", i+1, nameVector[i]);
         vectorFinalGrades[i] = readInteger(msg, 0, MAXGRADE);
     }
 }
@@ -135,7 +135,7 @@ void readGrades(int vectorFinalGrades[], int studentAmount, char nameVector[][MA
 int readAmountOfEvaluated(void) {
     int num;
 
-    num = readInteger("\nQuantos alunos foram avaliados: ", 0, MAXSUBSCRIBED);
+    num = readInteger("\nHow many students were avaluated? ", 0, MAXSUBSCRIBED);
 
     return num;
 }
