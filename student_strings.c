@@ -135,7 +135,7 @@ void readGrades(int vectorFinalGrades[], int studentAmount, char nameVector[][MA
 int readAmountOfEvaluated(void) {
     int num;
 
-    num = readInteger("\nHow many students were avaluated? ", 0, MAXSUBSCRIBED);
+    num = readInteger("\nHow many students were evaluated? ", 0, MAXSUBSCRIBED);
 
     return num;
 }

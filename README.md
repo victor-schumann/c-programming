@@ -1,6 +1,6 @@
 ## Project 01 - Student Grades
 ### Screenshots
-![working-program-1](https://i.imgur.com/apGHkPl.png)
+![hogwarts-grades](https://i.imgur.com/4wQeMHi.png)
 
 ### Goals
 - [x] Read names;
