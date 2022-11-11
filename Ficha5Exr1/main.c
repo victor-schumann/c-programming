@@ -4,43 +4,35 @@
 #define MAXINSCRITOS 25
 #define MAXNOTA 20
 
-// DECLARACAO das FUNÇÕES
+// DECLARACAO das FUNï¿½ï¿½ES
 int lerQuantidadeAvaliados(void);
 void lerNotas(int vetorNotasFinais[], int quantAlunos);
 int lerInteiro (int limMin, int limMax);
 void mostrarDados (int vetorNotasFinais[], int quantAlunos);
 float calculaMedia(int vetorNotasFinais[], int quantAlunos);
 
-int main()
-{
+int main() {
     int vetorNotasFinais[MAXINSCRITOS];
     int quantAlunos;
     float media;
 
-
     quantAlunos = lerQuantidadeAvaliados();
-
     lerNotas(vetorNotasFinais, quantAlunos);
-
     mostrarDados(vetorNotasFinais, quantAlunos);
-
     media = calculaMedia(vetorNotasFinais, quantAlunos);
-    if (media != -1)
-    {
+    if (media != -1) {
         printf("\nMEDIA das NOTAS: %.2f\n\n", media);
     }
 
     return 0;
 }
 
-// -- IMPLEMENTAÇÃO das FUNÇÕES ---
+// -- IMPLEMENTACAO DAS FUNCOES ---
 
-void alterarNota (int vetorNotasFinais[], int quantAlunos)
-{
+void alterarNota (int vetorNotasFinais[], int quantAlunos) {
     int nAluno;
 
-    if (quantAlunos > 0)
-    {
+    if (quantAlunos > 0) {
         printf("\nIndique o nr. aluno ");
         nAluno = lerInteiro(1, quantAlunos);
 
@@ -49,55 +41,41 @@ void alterarNota (int vetorNotasFinais[], int quantAlunos)
     }
 }
 
-
-float calculaMedia(int vetorNotasFinais[], int quantAlunos)
-{
+float calculaMedia(int vetorNotasFinais[], int quantAlunos) {
     int somaNotas=0, i;
     float media=-1;
 
-    for (i=0; i < quantAlunos; i++)
-    {
+    for (i=0; i < quantAlunos; i++) {
         somaNotas += vetorNotasFinais[i];
     }
 
-    if (quantAlunos != 0)
-    {
+    if (quantAlunos != 0) {
         media = (float) somaNotas / quantAlunos;
     }
 
     return media;
 }
 
-
-void mostrarDados (int vetorNotasFinais[], int quantAlunos)
-{
+void mostrarDados (int vetorNotasFinais[], int quantAlunos) {
     int i;
 
     printf("\n\n----- LISTAGEM das NOTAS -------");
-    if (quantAlunos == 0)
-    {
+    if (quantAlunos == 0) {
         printf("\nATENCAO: nao existem alunos avaliados para apresentar\n");
-    }
-    else
-    {
-        for (i=0; i < quantAlunos; i++)
-        {
+    } else {
+        for (i=0; i < quantAlunos; i++) {
             printf("\nNOTA(%d): %d", i+1, vetorNotasFinais[i]);
         }
     }
 }
 
-
-int lerInteiro (int limMin, int limMax)
-{
+int lerInteiro (int limMin, int limMax) {
     int num;
 
-    do
-    {
+    do {
         printf("\nvalor: ");
         scanf("%d", &num);
-        if (num < limMin || num > limMax)
-        {
+        if (num < limMin || num > limMax) {
             printf("\nERRO: o valor nao pertence ao intervalo [%d, %d]", limMin, limMax);
         }
     }
@@ -105,21 +83,16 @@ int lerInteiro (int limMin, int limMax)
     return num;
 }
 
-
-void lerNotas(int vetorNotasFinais[], int quantAlunos)
-{
+void lerNotas(int vetorNotasFinais[], int quantAlunos) {
     int i;
 
-    for (i=0; i < quantAlunos; i++)
-    {
+    for (i=0; i < quantAlunos; i++) {
         printf("\nNota (%d): ", i+1);
         vetorNotasFinais[i] = lerInteiro(0, MAXNOTA);
     }
 }
 
-
-int lerQuantidadeAvaliados(void)
-{
+int lerQuantidadeAvaliados(void) {
     int num;
 
     printf("\nQuantos alunos foram avaliados: ");
