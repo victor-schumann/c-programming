@@ -6,12 +6,10 @@
 int main()
 {
     tipoEstudante vetorAlunos[MAXALUNOS];
-    int quantAlunos = 0, quantProvisoria;
+    int quantAlunos = 0;
 
-    quantProvisoria = lerQuantidadeEstudantes();
-
-
-    for(int i=0; i < quantProvisoria; i++){
+    for(int i=0; i < quantProvisoria; i++)
+    {
         acrescentaAluno(vetorAlunos, &quantAlunos);
     }
 

@@ -1,7 +1,8 @@
 #ifndef FUNCOESGENERICAS_H_INCLUDED
 #define FUNCOESGENERICAS_H_INCLUDED
 
-typedef struct{
+typedef struct
+{
     int dia, mes, ano;
 } tipoData;
 
