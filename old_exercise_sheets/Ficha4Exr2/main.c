@@ -9,6 +9,7 @@ int leDadosRetangulo (int *comprimento);
 void leDadosRetangulo_v2 (int *comprimento, int *largura);
 char menu (int quantTriang, int quantQuad, int quantRet, int quantCirc);
 
+
 int main() {
     int comprimento, largura;
     int quantCirc=0, quantQuad=0, quantRet=0, quantTriang=0;
@@ -87,9 +88,7 @@ int leDadosRetangulo (int *comprimento) {
     return largura;
 }
 
-void areaRetangulo (int comp, int larg) {
-    printf("\nAREA DO QUADRILATERO = %d\n", comp*larg);
-}
+
 
 int lerNumero(void) {
     int num;
