@@ -39,6 +39,10 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="gestaoAlunos.h" />
+		<Unit filename="gestaoReservas.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gestaoReservas.h" />
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>

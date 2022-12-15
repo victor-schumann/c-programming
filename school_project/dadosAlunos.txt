@@ -1,0 +1,8 @@
+
+	Nr.: 10
+	Nome: Ana
+	Aluno nao avaliado
+
+	Nr.: 20
+	Nome: Rui
+	Aluno nao avaliado

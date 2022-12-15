@@ -15,6 +15,7 @@ typedef struct
     char nome[MAXSTRING];
     tipoData dataAvaliacao;
     int notaFinal;
+    int totalReservas;
 } tipoEstudante;
 
 int lerQuantidadeEstudantes(void);
@@ -23,5 +24,16 @@ void acrescentaAluno (tipoEstudante vetorAlunos[], int *quantAlunos);
 int procuraEstudante (int numAluno, tipoEstudante vetorAlunos[], int quantAlunos);
 void mostrarUmAluno(tipoEstudante aluno);
 void mostrarTodosAlunos(tipoEstudante vetorAlunos[], int quantAlunos);
+void lerNotas(tipoEstudante vetorAlunos[], int quantAlunos);
+
+
+void gravaFicheiroBinario(tipoEstudante vetorAlunos[], int quantAlunos);
+int lerFicheiroBinario(tipoEstudante vetorAlunos[], int quantAlunos);
+void lerFicheiroBinarioV2(tipoEstudante vetorAlunos[], int *quantAlunos);
+void gravaFicheiroTexto(tipoEstudante vetorAlunos[], int quantAlunos);
+
+
+float contas(tipoEstudante vetorAlunos[], int quantAlunos, int *quantAvaliados);
+
 
 #endif // GESTAOALUNOS_H_INCLUDED
